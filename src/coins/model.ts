@@ -14,9 +14,9 @@ const Coin = db.define(
       allowNull: false,
     },
     price: {
-      type: DataTypes.DECIMAL(20, 12),
+      type: DataTypes.DECIMAL(20, 8),
       allowNull: false,
-    },
+    }
     ip: {
       type: DataTypes.STRING,
       allowNull: false,
