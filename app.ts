@@ -3,6 +3,7 @@ import path from 'path';
 import coins from './src/coins';
 
 const app = express();
+app.set('trust proxy', true); // trust proxy for render
 
 // Set EJS as the view engine
 app.set('view engine', 'ejs');
