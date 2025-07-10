@@ -1,6 +1,6 @@
 # Coin Tracker
 
-A real-time cryptocurrency coin tracker built with Express, Sequelize, MySQL, and EJS. Users can add coins, see live updates via Server-Sent Events (SSE), and enjoy rate limiting and daily limits per user.
+A real-time cryptocurrency coin tracker built with Express, Sequelize, MySql, and EJS. Users can add coins, see live updates via Server-Sent Events (SSE), and enjoy rate limiting and daily limits per user.
 
 ## Features
 
@@ -12,44 +12,69 @@ A real-time cryptocurrency coin tracker built with Express, Sequelize, MySQL, an
 - Backend and frontend validation for price
 - Prevents invalid data from being stored
 
-## Installation
+## Installation & Deployment (SQl)
 
-1. **Clone the repository:**
+### 2. Clone the repository
 
-   ```sh
-   git clone https://github.com/iamsahilshukla/coint-tracker.git
-   cd coint-tracker/express
-   ```
+```sh
+git clone https://github.com/iamsahilshukla/coint-tracker.git
+cd coint-tracker/express
+```
 
-2. **Install dependencies:**
+### 3. Install dependencies
 
-   ```sh
-   npm install
-   ```
+```sh
+npm install
+```
 
-3. **Configure the database:**
+### 4. Install MySql driver
 
-   - Make sure you have MySQL running.
-   - Edit `config/config.json` with your MySQL credentials.
-   - The app will auto-create the database tables on first run.
+```sh
+npm install mysql2
+```
 
-4. **Build the project:**
+### 5. Configure environment variables
 
-   ```sh
-   npm run build
-   ```
+Create a `.env` file or set these in the codebase:
 
-5. **Start the server:**
+```
+DB_HOST=your-pg-host
+DB_NAME=your-db-name
+DB_USER=your-db-user
+DB_PASS=your-db-password
+DB_DIALECT=mysql
+DB_PORT=5432
+```
 
-   ```sh
-   npm start
-   ```
+### 6. Build the project
 
-6. **Open in your browser:**
-   - Visit [http://localhost:8000](http://localhost:8000)
+```sh
+npm run build
+```
+
+### 7. Start the server
+
+```sh
+npm start
+```
+
+### 8. Open in your browser
+
+- Visit [http://localhost:8000](http://localhost:8000) (locally)
+
+### 9. Hosted Url:- [https://coint-tracker.onrender.com/](https://coint-tracker.onrender.com/) (/web)
 
 ## Usage
 
 - Add a coin with a name and price (decimals supported)
 - See the latest coins update in real time
 - If you exceed 50 coins per day or 5 requests/sec, you'll get an error
+
+## Environment Variables
+
+- `DB_HOST`
+- `DB_NAME`
+- `DB_USER`
+- `DB_PASS`
+- `DB_DIALECT` (set to `mysql`)
+- `DB_PORT` (default: 5432)
